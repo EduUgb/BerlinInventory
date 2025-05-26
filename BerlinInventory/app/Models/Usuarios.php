@@ -13,6 +13,8 @@ class Usuarios extends Model
         'role',
     ];
 
+    protected $table = 'usuarios'; // Especificar tabla plural
+
     public function inventoryLogs()
     {
         return $this->hasMany(InventoryLogs::class, 'user_id');

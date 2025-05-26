@@ -1,61 +1,50 @@
-@extends('layouts.app')
+@extends("layouts.app")
 
 @section('content')
 
 <div class="card mt-5">
     <div class="bg-primary py-3">
-        <h2 class="text-white text-center">Lista de Usuarios</h2>
+        <h2 class="text-white text-center">Lista de usuarios</h2>
     </div>
 
     <div class="card-body">
         <a href="{{ route('usuarios.create') }}" class="btn btn-success btn-sm mb-3">
-            <i class="fa fa-plus"></i> Crear Usuario
+            <i class="fa fa-plus"></i> Nuevo Usuario
         </a>
 
-        <table class="table">
-            <thead>
+        <table class="table table-bordered">
+            <thead class="thead-dark">
                 <tr>
                     <th>ID</th>
                     <th>Nombre</th>
-                    <th>Email</th>
+                    <th>Correo</th>
                     <th>Rol</th>
+                    <th>Contraseña (hash)</th>
                     <th>Acciones</th>
                 </tr>
             </thead>
             <tbody>
-                @if ($usuarios->isEmpty())
+                @foreach($usuarios as $usuario)
                     <tr>
-                        <td colspan="5" class="text-center">
-                            <div class="alert alert-info">No hay usuarios registrados</div>
+                        <td>{{ $usuario->id }}</td>
+                        <td>{{ $usuario->user_name }}</td>
+                        <td>{{ $usuario->user_email }}</td>
+                        <td>{{ $usuario->role }}</td>
+                        <td class="text-truncate" style="max-width: 200px;">{{ $usuario->password }}</td>
+                        <td>
+                            <a href="{{ route('usuarios.show', $usuario->id) }}" class="btn btn-info btn-sm"><i class="fa fa-eye"></i>View</a>
+                            <a href="{{ route('usuarios.edit', $usuario->id) }}" class="btn btn-info btn-sm"><i class="fa fa-pencil"></i> Edit</a>
+                            <form action="{{ route('usuarios.destroy', $usuario->id) }}" method="POST" class="d-inline">
+                                @csrf
+                                @method('DELETE')
+                                <button class="btn btn-danger btn-sm" ><i class="fa fa-trash"></i> Delete</button>
+                            </form>
                         </td>
                     </tr>
-                @else
-                    @foreach ($usuarios as $user)
-                        <tr>
-                            <td>{{ $user->id }}</td>
-                            <td>{{ $user->user_name }}</td>
-                            <td>{{ $user->user_email }}</td>
-                            <td>{{ $user->role }}</td>
-                            <td>
-                                <form action="{{ route('usuarios.destroy', $user->id) }}" method="POST">
-                                    @csrf
-                                    @method('DELETE')
-                                    <a href="{{ route('usuarios.show', $user->id) }}" class="btn btn-primary btn-sm">
-                                        <i class="fa fa-eye"></i> Ver
-                                    </a>
-                                    <a href="{{ route('usuarios.edit', $user->id) }}" class="btn btn-info btn-sm">
-                                        <i class="fa fa-pencil"></i> Editar
-                                    </a>
-                                    <button type="submit" class="btn btn-danger btn-sm">
-                                        <i class="fa fa-trash"></i> Eliminar
-                                    </button>
-                                </form>
-                            </td>
-                        </tr>
-                    @endforeach
-                @endif
+                @endforeach
             </tbody>
         </table>
+
     </div>
 </div>
 
