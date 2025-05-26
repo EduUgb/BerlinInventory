@@ -62,13 +62,14 @@
 </template>
 
 <script setup>
-import logo from '/images/logo1.png'
-import img1 from '/images/imagen1.jpeg'
-import img2 from '/images/imagen2.jpeg'
-import img3 from '/images/imagen3.jpeg'
-import extra1 from '/images/imagen4.jpeg'
-import extra2 from '/images/imagen5.jpeg'
-import extra3 from '/images/imagen6.jpeg'
+const logo = '/images/logo1.png';
+const img1 = '/images/imagen1.jpeg';
+const img2 = '/images/imagen2.jpeg';
+const img3 = '/images/imagen3.jpeg';
+const extra1 = '/images/imagen4.jpeg';
+const extra2 = '/images/imagen5.jpeg';
+const extra3 = '/images/imagen6.jpeg';
+
 
 import '../../css/styles.css' // Asegúrate de que la ruta al CSS sea correcta
 
