@@ -4,7 +4,8 @@ use App\Http\Controllers\UsuarioController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
 
-Route::get('/', [UsuarioController::class, 'index']); // <- esta es la solución
+Route::get('/', [ProductController::class, 'welcome']);
+
 
 // Para productos
 Route::controller(ProductController::class)->group(function () {

@@ -10,6 +10,11 @@ class ProductController extends Controller
     /**
      * Display a listing of the resource.
      */
+
+    public function welcome()
+    {
+        return view('welcome');  // nombre sin .blade.php
+    }
     public function index()
     {
         
