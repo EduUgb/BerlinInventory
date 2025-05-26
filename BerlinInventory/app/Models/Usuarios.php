@@ -10,6 +10,7 @@ class Usuarios extends Model
         'user_name',
         'user_email',
         'password',
+        'role',
     ];
 
     public function inventoryLogs()

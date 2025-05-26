@@ -12,6 +12,7 @@ class ProductController extends Controller
      */
     public function index()
     {
+        
     $products = Products::all(); // Obtiene todos los productos
     return view('products.index', compact('products'));
     }
@@ -37,6 +38,9 @@ class ProductController extends Controller
         ]);{
         return redirect()->route('products.index')->with('success', 'Product created successfully.');
     }}
+
+
+    
 
         public function create(Products $product)
     {
