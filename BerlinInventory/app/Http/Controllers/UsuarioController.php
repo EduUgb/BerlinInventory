@@ -11,10 +11,10 @@ class UsuarioController extends Controller
      * Display a listing of the resource.
      */
 public function index()
-{
-$usuarios = Usuarios::all(); // Get all users
-return view('usuarios.index', compact('usuarios')); // Pass $usuarios to the view
-}
+    {
+    $usuarios = Usuarios::all(); // Get all users
+    return view('usuarios.index', compact('usuarios')); // Pass $usuarios to the view
+    }
 
     /**
      * Store a newly created resource in storage.
@@ -31,7 +31,7 @@ return view('usuarios.index', compact('usuarios')); // Pass $usuarios to the vie
        $usuario::create([
             "user_name" => $request->user_name,
             "user_email" => $request->user_email,
-            "password" => bcrypt($request->password), // Asegúrate de encriptar la contraseña
+            "password" => bcrypt($request->password), // encriptar la contraseña
             "role" => $request->role,
         ]);{
 

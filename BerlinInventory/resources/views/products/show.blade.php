@@ -10,7 +10,7 @@
 
 <div class="card-body" >
 
-    <a href="{{ route('products.index') }}" class="btn btn-info btn-sm mb-3"><i class="fa fa-arrow-left"></i> Back</a>
+    <a href="{{ route('products.index') }}" class="btn btn-info btn-sm mb-3"><i class="fa fa-arrow-left"></i> Volver</a>
             <div class="mt-4">
 
                 <p><strong>ID:</strong> {{ $product->id }}</p>

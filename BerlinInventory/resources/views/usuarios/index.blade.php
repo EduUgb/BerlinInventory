@@ -7,11 +7,18 @@
         <h2 class="text-white text-center">Lista de usuarios</h2>
     </div>
 
+
+
+
     <div class="card-body">
+        <a href="{{ url('/') }}" class="btn btn-info btn-sm mb-3">
+            <i class="fa fa-arrow-left"></i> Volver
+        </a>
+        <br>
         <a href="{{ route('usuarios.create') }}" class="btn btn-success btn-sm mb-3">
             <i class="fa fa-plus"></i> Nuevo Usuario
         </a>
-
+        
         <table class="table table-bordered">
             <thead class="thead-dark">
                 <tr>

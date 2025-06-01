@@ -7,6 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class InventoryLogs extends Model
 {
+    protected $table = 'inventory_logs';
+    
     protected $fillable = [
         'user_id',
         'prod_id',
@@ -14,6 +16,10 @@ class InventoryLogs extends Model
         'old_data',
         'new_data',
     ];
+
+
+
+
 
     public function usuario()
     {

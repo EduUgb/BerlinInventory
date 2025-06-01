@@ -9,6 +9,8 @@
 
 
 <div class="card-body">
+    <a href="{{ url('/') }}" class="btn btn-info btn-sm mb-3"> <i class="fa fa-arrow-left"></i> Volver</a>
+    <br>
     <a href="{{ route('products.create') }}" class="btn btn-success btn-sm mb-3"> <i class="fa fa-plus"></i> Create Product</a>
     <table class="table align-items-center">
 

@@ -3,22 +3,16 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use App\Models\Usuarios;
+use App\Models\Products;
+use App\Observers\UsuariosObserver;
+use App\Observers\ProductsObserver;
 
 class AppServiceProvider extends ServiceProvider
 {
-    /**
-     * Register any application services.
-     */
-    public function register(): void
+    public function boot()
     {
-        //
-    }
-
-    /**
-     * Bootstrap any application services.
-     */
-    public function boot(): void
-    {
-        //
+        Usuarios::observe(UsuariosObserver::class);
+        Products::observe(ProductsObserver::class);
     }
 }

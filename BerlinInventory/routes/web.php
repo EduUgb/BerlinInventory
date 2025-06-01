@@ -3,6 +3,7 @@
 use App\Http\Controllers\UsuarioController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\ExportController;
 
 Route::get('/', [ProductController::class, 'welcome']);
 
@@ -21,3 +22,10 @@ Route::controller(ProductController::class)->group(function () {
 
 // Reemplaza todo el grupo de rutas de usuarios con:
 Route::resource('usuarios', UsuarioController::class);
+
+Route::resource('export', ExportController::class);
+
+// Para exportar logs
+Route::get('/exportar', ExportController::class)->name('export'); // Cambiado a /exportar
+Route::view('/export', 'export.export'); // Ruta para mostrar el formulario
+Route::get('/export/show', [ExportController::class, 'show'])->name('export.show');

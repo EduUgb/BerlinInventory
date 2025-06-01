@@ -10,6 +10,8 @@
 
 
         <a href="/products" class="nav-link">Productos</a>
+        <a href="/export/show" class="nav-link">Registro</a>
+        
         <a href="#" class="nav-link login-link">Iniciar sesión</a>
       </nav>
     </header>

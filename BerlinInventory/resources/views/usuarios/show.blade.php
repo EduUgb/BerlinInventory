@@ -9,7 +9,7 @@
 
     <div class="card-body">
         <a href="{{ route('usuarios.index') }}" class="btn btn-info btn-sm mb-3">
-            <i class="fa fa-arrow-left"></i> Back
+            <i class="fa fa-arrow-left"></i> Volver
         </a>
 
         <div class="mt-4">
