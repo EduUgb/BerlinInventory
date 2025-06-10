@@ -6,6 +6,7 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ExportController;
 use App\Http\Controllers\UsuarioController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\FileReaderController;
 
 // RUTAS PARA INVITADOS (guest = NO autenticados)
 Route::middleware('guest')->group(function () {
@@ -52,12 +53,16 @@ Route::middleware('auth')->group(function () {
     Route::get('/dashboard', function () {
         return view('welcome');
     })->name('dashboard');
+
+    Route::get('/lector', [FileReaderController::class, 'index']);
+    Route::post('/lector/upload', [FileReaderController::class, 'upload'])->name('lector.upload');
+    Route::get('/contacto', function() {
+    return view('contacto');
+});
 });
 
 // Rutas de registro manual
 Route::get('/register', [UsuarioController::class, 'showRegisterForm'])->name('register');
 Route::post('/register', [RegisterController::class, 'store'])->name('register.store');
 
-Route::get('/contacto', function() {
-    return view('contacto');
-});
+

@@ -1,8 +1,9 @@
 <template>
   <div>
     <header class="navbar">
-      <div class="logo-section">
+      <div class="logo-section" onclick="window.location.href='/dashboard'">
         <img :src="logo" alt="Logo" class="logo" />
+
       </div>
 <nav class="nav-links">
   <button onclick="window.location.href='/usuarios'" class="button2">
@@ -14,6 +15,10 @@
   <button onclick="window.location.href='/export/show'" class="button2">
     <span class="button_top">Registro</span>
   </button>
+    <button onclick="window.location.href='/lector'" class="button2">
+    <span class="button_top">Lector</span>
+  </button>
+
 
   <!-- Botón logout si está autenticado -->
         <!-- Botón logout si está autenticado -->
@@ -173,139 +178,6 @@ async function logout() {
 </script>
 
 <style scoped>
-/* Estilo básico para el botón logout en la navbar */
-.logout-button {
-  background: none;
-  border: none;
-  color: #000000;
-  cursor: pointer;
-  font-size: 1rem;
-  padding: 0;
-  margin-left: 15px;
 
-}
-.logout-button:hover {
-  color: #ff4d4d;
-}
-/* Estilos existentes se mantienen */
-
-/* Nuevos estilos para la tarjeta de contacto */
-.contact-card {
-  position: relative;
-  display: block;
-  text-decoration: none;
-  color: #e8e8e8;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  background: linear-gradient(-45deg, #00ff77 0%, #7b168b 100%);
-  transition: all 0.3s cubic-bezier(0.215, 0.610, 0.355, 1);
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.contact-image {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-
-
-}
-
-.contact-text {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  pointer-events: none;
-}
-
-.contact-text span {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.3s cubic-bezier(0.215, 0.610, 0.355, 1);
-  font-weight: 600;
-  font-size: 1.5rem;
-}
-
-.initial-text {
-  opacity: 1;
-}
-
-.hover-text {
-  opacity: 0;
-  transform: translateY(100%);
-}
-
-.contact-card:before,
-.contact-card:after {
-  content: "";
-  position: absolute;
-  width: 24px;
-  height: 24px;
-  pointer-events: none;
-  transition: all 0.3s cubic-bezier(0.215, 0.610, 0.355, 1);
-}
-
-.contact-card:before {
-  top: 0;
-  left: 0;
-  border-top: 2px solid #e8e8e8;
-  border-left: 2px solid #e8e8e8;
-}
-
-.contact-card:after {
-  bottom: 0;
-  right: 0;
-  border-bottom: 2px solid #e8e8e8;
-  border-right: 2px solid #e8e8e8;
-}
-
-.contact-card:hover {
-  box-shadow: 0 0 30px rgba(248, 155, 41, 0.4),
-              0 0 30px rgba(255, 15, 123, 0.4);
-}
-
-.contact-card:hover .contact-image {
-  opacity: 0.4;
-}
-
-.contact-card:hover .initial-text {
-  opacity: 0;
-  transform: translateY(-100%);
-}
-
-.contact-card:hover .hover-text {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.contact-card:hover:before,
-.contact-card:hover:after {
-  width: 100%;
-  height: 100%;
-}
-
-.contact-card:active {
-  transform: scale(0.95);
-  box-shadow: 0 0 10px rgba(248, 155, 41, 0.4),
-              0 0 10px rgba(255, 15, 123, 0.4);
-}
-
-/* Ajustes para mantener consistencia con las otras tarjetas */
-.content-item {
-  /* Asegúrate que tenga position: relative si no la tiene */
-  position: relative;
-  overflow: hidden;
-  }
 
 </style>
