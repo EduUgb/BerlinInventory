@@ -9,7 +9,7 @@ export default defineConfig({
       input: ['resources/js/app.js',
               'resources/css/usuario-detalle.css',
               'resources/js/usuario-detalle.js',
-
+              'resources/css/fondo.css',
 
 
 

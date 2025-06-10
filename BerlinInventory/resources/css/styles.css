@@ -1,18 +1,17 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: rgba(255, 192, 91, 0.7); 
+    background: url(https://images.unsplash.com/photo-1428908728789-d2de25dbd4e2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D) no-repeat center center fixed;
     background-attachment: fixed;
     background-size: cover;
 }
 
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: rgba(255, 192, 91, 0.7);
-    padding: 10px 20px;
-    color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 2em;
+    background-color: rgb(123, 181, 235);
 }
 
 .logo-section {
@@ -31,12 +30,12 @@ body {
     font-size: 1.2em;
 }
 
+
 .nav-links {
-    display: flex;
-    flex: 1;
-    justify-content: space-between;
-    max-width: 400px;
-    margin-left: 50px;
+  display: flex;
+  align-items: center;
+  gap: 1em; /* espaciado entre botones */
+  flex-wrap: wrap;
 }
 
 .nav-link {
@@ -60,7 +59,7 @@ body {
 }
 
 .footer-bar {
-    background-color: rgba(255, 192, 91, 0.7);
+    background-color: rgb(123, 181, 235);
     color: black;
     text-align: center;
     padding: 10px 0;
@@ -153,7 +152,7 @@ html, body {
   flex-direction: column;
   align-items: center;
   max-width: 320px;
-  background: rgba(255, 192, 91, 0.7);
+    background-color: rgb(123, 181, 235);
   padding: 15px;
   border-radius: 12px;
   box-shadow: 0 0 15px rgba(0,0,0,0.1);
@@ -194,3 +193,105 @@ html, body {
     }
 }
 
+/*
+More comprehensive version at shenanigans.shoghisimon.ca/collection/css
+ */
+/* From Uiverse.io by vinodjangid07 */ 
+.Btn {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 45px;
+  height: 45px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition-duration: .3s;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
+  background-color: rgb(255, 65, 65);
+}
+
+/* plus sign */
+.sign {
+  width: 100%;
+  transition-duration: .3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sign svg {
+  width: 15px;
+}
+
+.sign svg path {
+  fill: white;
+}
+/* text */
+.text {
+
+  position: relative;
+  right: 0%;
+  width: 0%;
+  opacity: 0;
+  color: rgb(255, 255, 255);
+  font-size: 1.2em;
+  font-weight: 600;
+  transition-duration: .3s;
+}
+/* hover effect on button width */
+.Btn:hover {
+  width: 125px;
+  border-radius: 40px;
+  transition-duration: .3s;
+}
+
+.Btn:hover .sign {
+  width: 30%;
+  transition-duration: .3s;
+  padding-left: 20px;
+}
+/* hover effect button's text */
+.Btn:hover .text {
+  opacity: 1;
+  width: 70%;
+  transition-duration: .3s;
+  padding-right: 10px;
+}
+/* button click effect*/
+/* From Uiverse.io by xueyuantan */ 
+.button2 {
+ width: 9em;
+ height: 3em;
+ border-radius: 30em;
+ font-size: 15px;
+ font-family: inherit;
+ border: none;
+ position: relative;
+ overflow: hidden;
+ z-index: 1;
+
+ color: rgb(255, 255, 255);
+ background-color: rgba(131, 218, 128, 0.786);
+
+}
+
+.button2::before {
+ content: '';
+ width: 0;
+ height: 3em;
+ border-radius: 30em;
+ position: absolute;
+ top: 0;
+ left: 0;
+ background-image: linear-gradient(to right, #0ca3f5 0%, #ef9b9b 100%);
+ transition: .5s ease;
+ display: block;
+ z-index: -1;
+}
+
+button:hover::before {
+ width: 9em;
+}
