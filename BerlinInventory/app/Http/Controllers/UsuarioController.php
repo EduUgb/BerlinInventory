@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Usuarios; // Cambia a tu modelo de Usuario
+use App\Models\Usuarios; // Cambia a tu modelo de Usuarios
 use Illuminate\Http\Request;
 
 class UsuarioController extends Controller
