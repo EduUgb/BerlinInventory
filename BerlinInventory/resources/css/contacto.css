@@ -1,0 +1,282 @@
+
+
+        :root {
+            --primary-color: #8e6e02;  /* Amarillo oscuro */
+            --secondary-color: #ffc107;  /* Amarillo principal */
+            --accent-color: #e74c3c;
+            --light-color: #fff9e6;  /* Amarillo muy claro */
+            --dark-color: #4d3d00;  /* Amarillo muy oscuro */
+        }
+
+        /* Estilos generales */
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--dark-color);
+            line-height: 1.6;
+            background-color: #fffdf5;  /* Fondo amarillo muy claro */
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        .contact-header {
+            position: relative;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 80px 0 120px;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .header-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .contact-header h1 {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            animation: fadeInDown 1s ease;
+        }
+
+        .contact-header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            animation: fadeInUp 1s ease 0.3s forwards;
+            opacity: 0;
+        }
+
+        .header-wave {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+        }
+
+        .header-wave svg {
+            position: relative;
+            display: block;
+            width: calc(100% + 1.3px);
+            height: 120px;
+        }
+
+        .header-wave .shape-fill {
+            fill: #fffdf5;  /* Fondo amarillo muy claro */
+        }
+
+        /* Tarjetas de contacto */
+        .contact-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: -60px auto 80px;
+            padding: 0 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .contact-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .card-icon {
+            width: 80px;
+            height: 80px;
+            background: rgba(255, 193, 7, 0.1);  /* Amarillo con transparencia */
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto 25px;
+            color: var(--secondary-color);
+            font-size: 30px;
+            transition: all 0.3s ease;
+        }
+
+        .contact-card:hover .card-icon {
+            background: var(--secondary-color);
+            color: white;
+            transform: rotate(360deg);
+        }
+
+        .contact-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+
+        .contact-card p {
+            margin-bottom: 20px;
+            white-space: pre-line;
+        }
+
+        .contact-card a {
+            display: inline-block;
+            padding: 10px 25px;
+            background: rgba(255, 193, 7, 0.1);  /* Amarillo con transparencia */
+            color: var(--secondary-color);
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .contact-card a:hover {
+            background: var(--secondary-color);
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(255, 193, 7, 0.3);  /* Sombra amarilla */
+        }
+
+        .contact-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 0;
+            background: var(--secondary-color);
+            transition: height 0.3s ease;
+        }
+
+        .contact-card:hover::before {
+            height: 100%;
+        }
+
+        /* Mapa */
+        .map-container {
+            margin-bottom: 80px;
+        }
+
+        .map-container h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 40px;
+            color: var(--primary-color);
+            position: relative;
+        }
+
+        .map-container h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: var(--secondary-color);
+        }
+
+        .map-wrapper {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            height: 400px;
+        }
+
+        .map-wrapper iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        /* Animaciones */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .contact-header {
+                padding: 60px 0 100px;
+            }
+            
+            .contact-header h1 {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .contact-cards {
+                margin-top: -30px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .contact-header {
+                padding: 40px 0 80px;
+            }
+            
+            .contact-header h1 {
+                font-size: 2rem;
+            }
+            
+            .contact-header p {
+                font-size: 1rem;
+            }
+            
+            .contact-card {
+                padding: 30px 20px;
+            }
+        }
+            /* From Uiverse.io by SteveBloX */ 
+            .button {
+            width: 100px;
+            height: 40px;
+            border: 3px solid #315cfd;
+            border-radius: 45px;
+            transition: all 0.3s;
+            cursor: pointer;
+            background: rgb(255, 255, 255);
+            font-size: 1.2em;
+            font-weight: 550;
+            text-decoration: none;
+            }
+
+            .button:hover {
+            background: #315cfd;
+            color: white;
+            font-size: 1.5em;
+            }

@@ -2,9 +2,10 @@
 
 namespace App\Models;
 
+use Illuminate\Foundation\Auth\User as Authenticatable;  // ← Extiende esta clase
 use Illuminate\Database\Eloquent\Model;
 
-class Usuarios extends Model
+class Usuarios extends Authenticatable  // ← Cambia el nombre de la clase a Usuarios
 {
     protected $fillable = [
         'user_name',
@@ -14,6 +15,13 @@ class Usuarios extends Model
     ];
 
     protected $table = 'usuarios'; // Especificar tabla plural
+
+
+    //Authentication
+    public function getAuthIdentifierName()
+    {
+        return 'user_email';
+    }
 
     public function inventoryLogs()
     {

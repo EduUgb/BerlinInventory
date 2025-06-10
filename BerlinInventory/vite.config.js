@@ -6,7 +6,14 @@ import path from 'path'
 export default defineConfig({
   plugins: [
     laravel({
-      input: ['resources/js/app.js'],  // entrada del frontend
+      input: ['resources/js/app.js',
+              'resources/css/usuario-detalle.css',
+              'resources/js/usuario-detalle.js',
+
+
+
+
+      ],  // entrada del frontend
       refresh: true
     }),
     vue()

@@ -88,4 +88,10 @@ public function index()
         $usuario->delete();
         return redirect()->route('usuarios.index')->with('success', 'Usuario eliminado exitosamente.');
     }
+
+
+        public function showRegisterForm()
+    {
+        return view('auth.register'); // esto cargará resources/views/auth/register.blade.php
+    }
 }

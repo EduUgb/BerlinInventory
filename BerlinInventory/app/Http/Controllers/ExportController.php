@@ -14,7 +14,7 @@ class ExportController extends Controller
             'format' => 'required|in:json,csv' // Asegura que el formato sea válido
         ]);
         
-        $logs = InventoryLogs::with(['usuario', 'products'])
+        $logs = InventoryLogs::with(['usuario', 'product'])
                 ->orderBy('created_at', 'desc')
                 ->get();
 
@@ -75,7 +75,7 @@ class ExportController extends Controller
     }
     public function show()
     {
-        $logs = InventoryLogs::with(['usuario', 'products'])
+        $logs = InventoryLogs::with(['usuario', 'product'])
                 ->orderBy('created_at', 'desc')
                 ->paginate(3);
 
