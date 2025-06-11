@@ -265,18 +265,19 @@
             .button {
             width: 100px;
             height: 40px;
-            border: 3px solid #315cfd;
+            border: 3px solid #ffb700;
             border-radius: 45px;
             transition: all 0.3s;
             cursor: pointer;
-            background: rgb(255, 255, 255);
+            background: rgb(203, 128, 48);
             font-size: 1.2em;
             font-weight: 550;
             text-decoration: none;
+            color: #ffffff;
             }
 
             .button:hover {
-            background: #315cfd;
+            background: #d94436;
             color: white;
             font-size: 1.5em;
             }

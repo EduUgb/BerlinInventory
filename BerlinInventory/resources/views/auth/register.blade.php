@@ -37,7 +37,7 @@
         {{-- Botones --}}
         <div class="btn">
             <button type="submit" class="button1">Registrarse</button>
-            <a href="{{ route('login') }}" class="button2">Iniciar sesión</a>
+            <a href="{{ route('login') }}" class="button2">Volver</a>
         </div>
 
     </form>

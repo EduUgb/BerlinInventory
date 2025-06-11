@@ -51,7 +51,7 @@
                 </div>
                 <h3>Teléfono</h3>
                 <p>+503 1010 1919</p>
-                <a>Llamar ahora</a>
+
             </div>
 
             <!-- Tarjeta 3: Email -->
@@ -61,7 +61,7 @@
                 </div>
                 <h3>Correo electrónico</h3>
                 <p>info@berlinventory.com</p>
-                <a href="mailto:info@berlinventory.com">Enviar email</a>
+
             </div>
 
             <!-- Tarjeta 4: Horario -->
