@@ -1,5 +1,6 @@
 
-INTEGRANTES
+INTEGRANTES:
+
 Carlos Ernesto Vasquez Stech
 SMSS023423
 
